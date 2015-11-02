@@ -1,9 +1,10 @@
 package cmp_test
 
 import (
-	"github.com/iNamik/go_cmp"
 	"math/rand"
 	"testing"
+
+	"github.com/iNamik/go_cmp"
 )
 
 // TestIntEqual
@@ -42,7 +43,7 @@ func TestStringEqual(t *testing.T) {
 	b := cmp.String("Apple")
 
 	if a.Cmp(b) != cmp.EQ {
-		t.Fatal("%s <=> %s did not generate EQUAL result", a, b)
+		t.Fatalf("%s <=> %s did not generate EQUAL result", a, b)
 	}
 }
 
@@ -52,7 +53,7 @@ func TestStringLessThan(t *testing.T) {
 	b := cmp.String("Bunny")
 
 	if a.Cmp(b) != cmp.LT {
-		t.Fatal("%s <=> %s did not generate LESS_THAN result", a, b)
+		t.Fatalf("%s <=> %s did not generate LESS_THAN result", a, b)
 	}
 }
 
@@ -62,7 +63,7 @@ func TestStringGreaterThan(t *testing.T) {
 	b := cmp.String("Candy")
 
 	if a.Cmp(b) != cmp.GT {
-		t.Fatal("%s <=> %s did not generate GREATER_THAN result", a, b)
+		t.Fatalf("%s <=> %s did not generate GREATER_THAN result", a, b)
 	}
 }
 
